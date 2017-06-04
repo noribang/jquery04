@@ -2,6 +2,7 @@ $(document).ready(function() {
 	$('button#hello').click(function() {
 		$('ul#user').prepend('<li>Hello!</li>');
 		$('ul#webpage').prepend('<li>Why hello there!</li>');
+		$('li').css('background-color', 'green');
 	});
 	$('button#goodbye').click(function() {
 		$('ul#user').prepend('<li>Goodbye</li>');
@@ -11,4 +12,7 @@ $(document).ready(function() {
 		$('ul#user').prepend('<li>Stop copying me!</li>');
 		$('ul#webpage').prepend('<li>Pardon me. I meant no offense.</li>');
 	});
+	// THIS WILL NEVER BE CALLED SINCE THERE WILL BE NO
+	// <li> THAT EXIST RIGHT AFTER DOM LOADS
+	//$('li').css('background-color', 'green');
 });
